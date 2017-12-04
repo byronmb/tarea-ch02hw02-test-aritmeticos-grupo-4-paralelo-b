@@ -21,16 +21,17 @@ public class TestdePreguntas {
         //Arreglo para guardar las respuestas del usuario
         int []arregloRU = new int [10];
         String lista="";
+        //Mediante el for se generaran 3 preguntas de resta, se guardan en los arreglos RC y RU las respuestas correctas y las 
+        //proporcionadas por el usuario respectivamente y el string (lista) guarda la comparación;
         for (int i = 0; i < 3; i++) {
              PreguntaResta resta=new PreguntaResta();
              int a=Integer.parseInt(JOptionPane.showInputDialog(null,resta.getPregunta()));
              resta.compararRespuesta(a);
              arregloRU[i]=a;
              arregloRC[i]=resta.getRespuestaCorrecta();
-             //lista = lista + resta.getPregunta()+" = "+resta.getRespuestaCorrecta()+", Su respuesta es: "+a+"\n";
              lista=lista+resta.compararRespuesta(a)+"\n";
         }
-  
+        
         for (int i = 3; i < 6; i++) {
              PreguntaAdicion suma=new PreguntaAdicion();
              int a=Integer.parseInt(JOptionPane.showInputDialog(null,suma.getPregunta()));
@@ -48,7 +49,7 @@ public class TestdePreguntas {
              arregloRC[i]=multi.getRespuestaCorrecta();
              lista=lista+multi.compararRespuesta(a)+"\n";
         }
-
+        //Revisa las respuestas del usuario una por una para comprobar que sean correctas
         for (int i = 0; i < 10; i++) {
             if (arregloRC[i]==arregloRU[i]){
                 puntuacion+=10;

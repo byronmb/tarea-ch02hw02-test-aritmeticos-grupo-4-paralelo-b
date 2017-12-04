@@ -16,8 +16,9 @@ public class TestdePreguntas {
 
         
          int puntuacion=0;
-
+        //Arreglo para guardar las respuestas correctas
         int []arregloRC = new int [10];
+        //Arreglo para guardar las respuestas del usuario
         int []arregloRU = new int [10];
         String lista="";
         for (int i = 0; i < 3; i++) {

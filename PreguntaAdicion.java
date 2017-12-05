@@ -27,10 +27,8 @@ public class PreguntaAdicion implements PreguntaEntera{
 
     public String compararRespuesta(int respuestaU){//Compara si la respuesta dada por el usuario es correcta
         if (respuestaU==getRespuestaCorrecta()) {//si la respuesta es correcta se guarda en la variable Lista la pregunta y la respuesta dada por el usuario
-            //JOptionPane.showMessageDialog(null, getPregunta()+"="+getRespuestaCorrecta()+ " Correcta");
             lista=getPregunta()+"="+getRespuestaCorrecta()+ " Correcta";
         }else{//Si la respuesta es incorrecta se guarda en la variable lista la pregunta con la respuesta del usuario
-            //JOptionPane.showMessageDialog(null, getPregunta()+"="+getRespuestaCorrecta()+ " Tu respuesta: "+respuestaU+" Incorrecta");
             lista=getPregunta()+"="+getRespuestaCorrecta()+ "  Tu respuesta: "+respuestaU+" Incorrecta";
         }
         return lista;

@@ -25,7 +25,7 @@ public class TestdePreguntas {
         //proporcionadas por el usuario respectivamente y el string (lista) guarda la comparación;
         for (int i = 0; i < 3; i++) {
              PreguntaResta resta=new PreguntaResta();
-             int a=Integer.parseInt(JOptionPane.showInputDialog(null,resta.getPregunta()));
+             int a=Integer.parseInt(JOptionPane.showInputDialog(null,+(i+1)+". "+resta.getPregunta()));
              resta.compararRespuesta(a);
              arregloRU[i]=a;
              arregloRC[i]=resta.getRespuestaCorrecta();
@@ -34,7 +34,7 @@ public class TestdePreguntas {
         
         for (int i = 3; i < 6; i++) {
              PreguntaAdicion suma=new PreguntaAdicion();
-             int a=Integer.parseInt(JOptionPane.showInputDialog(null,suma.getPregunta()));
+             int a=Integer.parseInt(JOptionPane.showInputDialog(null,+(i+1)+". "+suma.getPregunta()));
              suma.compararRespuesta(a);
              arregloRU[i]=a;
              arregloRC[i]=suma.getRespuestaCorrecta();
@@ -43,7 +43,7 @@ public class TestdePreguntas {
         
         for (int i = 6; i < 10; i++) {
              PreguntaMultiplicacion multi=new PreguntaMultiplicacion();
-             int a=Integer.parseInt(JOptionPane.showInputDialog(null,multi.getPregunta()));
+             int a=Integer.parseInt(JOptionPane.showInputDialog(null,+(i+1)+". "+multi.getPregunta()));
              multi.compararRespuesta(a);
              arregloRU[i]=a;
              arregloRC[i]=multi.getRespuestaCorrecta();
